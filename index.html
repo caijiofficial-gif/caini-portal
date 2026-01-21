@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Digital Enrollment System</title>
+<title>SHS Digital Enrollment Portal</title>
 <style>
 body{
-  font-family: Arial;
+  font-family:Arial;
   background:#eef2f3;
   padding:20px;
 }
 .box{
-  max-width:420px;
+  max-width:430px;
   margin:auto;
-  background:white;
+  background:#fff;
   padding:20px;
-  border-radius:10px;
+  border-radius:12px;
 }
 button{
   width:100%;
   padding:12px;
   margin-top:10px;
   background:#3498db;
-  color:white;
+  color:#fff;
   border:none;
   border-radius:8px;
   font-size:16px;
@@ -30,11 +30,51 @@ input, select{
   padding:10px;
   margin-top:8px;
 }
-a{
-  display:block;
+.link{
   text-align:center;
   margin-top:10px;
   text-decoration:underline;
+  color:#3498db;
+  cursor:pointer;
+}
+.hidden{display:none;}
+</style>
+</head>
+
+<body>
+
+<!-- START -->
+<div class="box" id="start">
+  <h2>Welcome</h2>
+  <button onclick="show('login')">Login</button>
+  <button onclick="show('signup1')">Sign Up</button>
+</div>
+
+<!-- LOGIN -->
+<div class="box hidden" id="login">
+  <h2>Login</h2>
+  <input id="loginUser" placeholder="Login PIN">
+  <input id="loginPass" placeholder="Password">
+  <button onclick="login()">Enter</button>
+  <div class="link" onclick="show('signup1')">Register</div>
+</div>
+
+<!-- SIGN UP 1 -->
+<div class="box hidden" id="signup1">
+  <h2><u>Register</u></h2>
+  <input id="fname" placeholder="First Name">
+  <input id="minitial" placeholder="Middle Initial (Optional)">
+  <input id="lname" placeholder="Last Name">
+  <button onclick="show('signup2')">Enter</button>
+</div>
+
+<!-- SIGN UP 2 -->
+<div class="box hidden" id="signup2">
+  <h2>Student Information</h2>
+  <input id="lrn" placeholder="LRN">
+  <input id="age" placeholder="Age">
+  <input id="email" placeholder="Email">
+  <input id="father" placeholder  text-decoration:underline;
   color:#3498db;
 }
 .hidden{ display:none; }
